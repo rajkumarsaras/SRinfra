@@ -14,7 +14,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">SR INFRA</h3>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/SRinfra/SrInfraLogo.png" 
+                alt="SR Infra Logo" 
+                className="h-16 w-auto"
+              />
+              <h3 className="text-2xl font-bold">SR INFRA</h3>
+            </div>
             <p className="text-gray-400 mb-4">
               Premium flats & apartments in Hyderabad, Telangana & Andhra Pradesh. Your trusted real estate partner.
             </p>
