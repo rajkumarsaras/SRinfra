@@ -49,14 +49,14 @@ export default function About() {
           </p>
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 text-left">
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-white p-8 rounded-2xl premium-shadow hover:premium-glow transition-all duration-500 hover:-translate-y-1">
                 <h3 className="text-2xl font-bold text-primary-600 mb-3">Our Vision</h3>
                 <p className="text-gray-600 leading-relaxed">
                   To be successful in the construction industry, known for our forward-thinking approach 
                   and dedication to creating sustainable and valuable spaces that enhance communities and improve lives.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-white p-8 rounded-2xl premium-shadow hover:premium-glow transition-all duration-500 hover:-translate-y-1">
                 <h3 className="text-2xl font-bold text-primary-600 mb-3">Our Mission</h3>
                 <p className="text-gray-600 leading-relaxed">
                   To innovate and excel in construction by delivering projects that embody sustainability, 

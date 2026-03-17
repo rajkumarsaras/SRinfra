@@ -6,10 +6,25 @@
   body {
     @apply bg-white text-gray-900;
   }
+  * {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply antialiased;
+  }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 via-primary-700 to-primary-900;
+  }
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+  .premium-shadow {
+    box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.3);
+  }
+  .premium-glow {
+    box-shadow: 0 0 40px rgba(234, 88, 12, 0.15);
   }
 }

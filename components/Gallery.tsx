@@ -6,30 +6,32 @@ import { useState } from 'react'
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
 
+  const basePath = process.env.NODE_ENV === 'production' ? '/SRinfra' : ''
+  
   const galleryImages = [
     {
       title: 'S S Heights',
       category: 'Completed - Madhapur',
       color: 'from-blue-500 to-blue-700',
-      image: '/SRinfra/Projects/SSHights.png',
+      image: `${basePath}/Projects/SSHights.png`,
     },
     {
       title: 'S S Interior',
       category: 'Premium Interiors',
       color: 'from-green-500 to-green-700',
-      image: '/SRinfra/Projects/SSInteror.png',
+      image: `${basePath}/Projects/SSInteror.png`,
     },
     {
       title: 'Project SS',
       category: 'Residential Development',
       color: 'from-purple-500 to-purple-700',
-      image: '/SRinfra/Projects/ProjectSS.png',
+      image: `${basePath}/Projects/ProjectSS.png`,
     },
     {
       title: 'Ongoing Project',
       category: 'Under Construction',
       color: 'from-orange-500 to-orange-700',
-      image: '/SRinfra/Projects/Project1.png',
+      image: `${basePath}/Projects/Project1.png`,
     },
   ]
 
@@ -59,7 +61,7 @@ export default function Gallery() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="relative h-80 rounded-xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="relative h-80 rounded-2xl overflow-hidden cursor-pointer group premium-shadow hover:premium-glow transition-all duration-500 hover:-translate-y-2"
               onClick={() => setSelectedImage(index)}
             >
               <img 

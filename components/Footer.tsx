@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="mb-4">
               <img 
-                src="/SRinfra/SrInfraLogo.png" 
+                src={`${process.env.NODE_ENV === 'production' ? '/SRinfra' : ''}/SrInfraLogo.png`}
                 alt="SR Infra Logo" 
                 className="h-20 w-auto mb-4"
               />
@@ -55,10 +55,11 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>+1 (555) 123-4567</li>
-              <li>info@srinfra.com</li>
-              <li>123 Infrastructure Ave</li>
-              <li>City, State 12345</li>
+              <li>+91 8977520516</li>
+              <li>+91 8977020517</li>
+              <li>+91 8977020518</li>
+              <li>srinfra33@gmail.com</li>
+              <li className="leading-relaxed">Diamond Oak, Block B, Road No.2,<br />Doctors Colony, Gulmohar Park,<br />Nallagandla, Serilingampally,<br />Rangareddy, Telangana</li>
             </ul>
           </div>
         </div>

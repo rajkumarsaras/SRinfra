@@ -110,7 +110,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary-200 group"
+              className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl premium-shadow hover:premium-glow transition-all duration-500 border border-gray-200 hover:border-primary-300 group hover:-translate-y-2"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-6 group-hover:bg-primary-600 transition-colors duration-300">
                 <project.icon className="text-3xl text-primary-600 group-hover:text-white transition-colors duration-300" />
