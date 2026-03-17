@@ -5,28 +5,28 @@ import { FaAward, FaUsers, FaBuilding, FaChartLine } from 'react-icons/fa'
 
 export default function About() {
   const stats = [
-    { icon: FaBuilding, value: '1100+', label: 'Apartments Delivered' },
-    { icon: FaUsers, value: '850+', label: 'Happy Families' },
-    { icon: FaAward, value: '15+', label: 'Awards Won' },
-    { icon: FaChartLine, value: '12+', label: 'Years Experience' },
+    { icon: FaChartLine, value: '20+', label: 'Years Experience' },
+    { icon: FaBuilding, value: '10+', label: 'Projects Completed' },
+    { icon: FaUsers, value: '3', label: 'Managing Partners' },
+    { icon: FaAward, value: '100%', label: 'Client Satisfaction' },
   ]
 
   const features = [
     {
-      title: 'Prime Locations',
-      description: 'Strategic locations in Hyderabad, Vijayawada, and major cities across Telangana & Andhra Pradesh.',
+      title: 'Sustainable Construction',
+      description: 'Eco-friendly designs, materials and construction methods ensuring sustainability and environmental stewardship.',
     },
     {
-      title: 'World-Class Amenities',
-      description: 'Clubhouse, swimming pool, gym, landscaped gardens, and 24/7 security in all our projects.',
+      title: 'Expert Team',
+      description: 'Certified architects, skilled engineers with 20+ years experience, and dedicated construction professionals.',
     },
     {
-      title: 'Vastu Compliant',
-      description: 'All our apartments are designed following Vastu principles for positive energy and prosperity.',
+      title: 'Quality Excellence',
+      description: 'High-quality construction projects embodying durability, modernity, and meeting evolving client needs.',
     },
     {
-      title: 'Affordable Pricing',
-      description: 'Flexible payment plans and competitive pricing to make your dream home affordable.',
+      title: 'Project Management',
+      description: 'Comprehensive oversight from conception through completion ensuring timely delivery and success.',
     },
   ]
 
@@ -43,10 +43,28 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             About <span className="text-gradient">SR Infra</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Leading real estate developer specializing in premium flats and apartments across 
-            Hyderabad, Telangana & Andhra Pradesh. Building dream homes with excellence.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+            A dynamic and innovative construction company established by experienced Civil Engineers, 
+            redefining the landscape of the construction industry.
           </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 text-left">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-primary-600 mb-3">Our Vision</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  To be successful in the construction industry, known for our forward-thinking approach 
+                  and dedication to creating sustainable and valuable spaces that enhance communities and improve lives.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-primary-600 mb-3">Our Mission</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  To innovate and excel in construction by delivering projects that embody sustainability, 
+                  durability and modernity, ensuring client satisfaction and environmental stewardship are at the forefront.
+                </p>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">

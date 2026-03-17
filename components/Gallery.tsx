@@ -8,40 +8,28 @@ export default function Gallery() {
 
   const galleryImages = [
     {
-      title: 'SR Skyline Residency - Gachibowli',
-      category: 'Luxury Apartments',
+      title: 'S S Heights',
+      category: 'Completed - Madhapur',
       color: 'from-blue-500 to-blue-700',
-      image: '/images/skyline-residency.jpg',
+      image: '/SRinfra/Projects/SSHights.png',
     },
     {
-      title: 'SR Green Valley - Kondapur',
-      category: 'Eco Homes',
+      title: 'S S Interior',
+      category: 'Premium Interiors',
       color: 'from-green-500 to-green-700',
-      image: '/images/green-valley.jpg',
+      image: '/SRinfra/Projects/SSInteror.png',
     },
     {
-      title: 'SR Elite Towers - HITEC City',
-      category: 'Smart Apartments',
+      title: 'Project SS',
+      category: 'Residential Development',
       color: 'from-purple-500 to-purple-700',
-      image: '/images/elite-towers.jpg',
+      image: '/SRinfra/Projects/ProjectSS.png',
     },
     {
-      title: 'SR Vijayawada Heights',
-      category: 'Affordable Housing',
+      title: 'Ongoing Project',
+      category: 'Under Construction',
       color: 'from-orange-500 to-orange-700',
-      image: '/images/vijayawada-heights.jpg',
-    },
-    {
-      title: 'SR Paradise Homes - Miyapur',
-      category: 'Metro Connectivity',
-      color: 'from-pink-500 to-pink-700',
-      image: '/images/paradise-homes.jpg',
-    },
-    {
-      title: 'Clubhouse & Amenities',
-      category: 'Premium Facilities',
-      color: 'from-indigo-500 to-indigo-700',
-      image: '/images/amenities.jpg',
+      image: '/SRinfra/Projects/Project1.png',
     },
   ]
 
@@ -59,7 +47,7 @@ export default function Gallery() {
             Project <span className="text-gradient">Gallery</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our premium residential projects - luxury apartments and flats across Hyderabad & Andhra Pradesh.
+            Explore our portfolio of ongoing and completed projects - luxury villas, residential towers, and gated communities across Hyderabad.
           </p>
         </motion.div>
 
@@ -71,17 +59,19 @@ export default function Gallery() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="relative h-80 rounded-xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-2xl transition-all duration-300"
               onClick={() => setSelectedImage(index)}
-              className="relative h-80 rounded-xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-2xl transition-shadow duration-300"
             >
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${image.color} opacity-90 group-hover:opacity-100 transition-opacity duration-300`}
-              ></div>
+              <img 
+                src={image.image} 
+                alt={image.title}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
               
-              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMTRjMy4zMTQgMCA2IDIuNjg2IDYgNnMtMi42ODYgNi02IDYtNi0yLjY4Ni02LTYgMi42ODYtNiA2LTZ6TTI0IDM2YzMuMzE0IDAgNiAyLjY4NiA2IDZzLTIuNjg2IDYtNiA2LTYtMi42ODYtNi02IDIuNjg2LTYgNi02eiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
 
               <div className="relative h-full flex flex-col justify-end p-6 text-white">
-                <span className="text-sm font-semibold bg-white bg-opacity-20 backdrop-blur-sm px-3 py-1 rounded-full mb-3 inline-block w-fit">
+                <span className="text-sm font-semibold bg-primary-600 bg-opacity-90 backdrop-blur-sm px-3 py-1 rounded-full mb-3 inline-block w-fit">
                   {image.category}
                 </span>
                 <h3 className="text-2xl font-bold mb-2">{image.title}</h3>
@@ -93,28 +83,28 @@ export default function Gallery() {
 
         {selectedImage !== null && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedImage(null)}
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="relative max-w-4xl w-full"
+              className="relative max-w-6xl w-full"
+              onClick={(e) => e.stopPropagation()}
             >
-              <div
-                className={`w-full h-96 rounded-xl bg-gradient-to-br ${galleryImages[selectedImage].color}`}
-              >
-                <div className="h-full flex items-center justify-center text-white">
-                  <div className="text-center">
-                    <h3 className="text-3xl font-bold mb-2">
-                      {galleryImages[selectedImage].title}
-                    </h3>
-                    <p className="text-xl">{galleryImages[selectedImage].category}</p>
-                  </div>
-                </div>
+              <img 
+                src={galleryImages[selectedImage].image}
+                alt={galleryImages[selectedImage].title}
+                className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6 rounded-b-lg">
+                <h3 className="text-3xl font-bold text-white mb-2">
+                  {galleryImages[selectedImage].title}
+                </h3>
+                <p className="text-xl text-gray-200">{galleryImages[selectedImage].category}</p>
               </div>
               <button
-                className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300"
+                className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center"
                 onClick={() => setSelectedImage(null)}
               >
                 ×

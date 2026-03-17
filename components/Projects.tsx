@@ -4,53 +4,76 @@ import { motion } from 'framer-motion'
 import { FaBuilding, FaHome, FaCity, FaKey, FaMapMarkerAlt } from 'react-icons/fa'
 
 export default function Projects() {
-  const projects = [
+  const ongoingProjects = [
     {
       icon: FaBuilding,
-      title: 'SR Skyline Residency',
-      location: 'Gachibowli, Hyderabad',
-      description: 'Premium 3 & 4 BHK apartments with world-class amenities. 250 luxury units spread across 2 towers with clubhouse, swimming pool, and gym.',
-      category: 'Luxury Apartments',
-      status: 'Ready to Move',
-      area: '1850-2400 sq.ft',
+      title: 'Aparna Amber Villas',
+      location: 'Gopanpalli, Hyderabad',
+      description: 'Prestigious villas gated community project offering luxury living with modern amenities and sustainable design.',
+      category: 'Luxury Villas',
+      status: 'Ongoing',
+      type: 'ongoing',
     },
     {
       icon: FaHome,
-      title: 'SR Green Valley',
-      location: 'Kondapur, Hyderabad',
-      description: 'Eco-friendly 2 & 3 BHK flats with rainwater harvesting and solar panels. 180 units with landscaped gardens and children\'s play area.',
-      category: 'Eco Homes',
-      status: 'Under Construction',
-      area: '1200-1650 sq.ft',
+      title: 'S Square Infra',
+      location: 'Pati Ghanpur, Patancheru',
+      description: 'Prestigious villas gated community project featuring premium construction and world-class facilities.',
+      category: 'Gated Community',
+      status: 'Ongoing',
+      type: 'ongoing',
     },
     {
       icon: FaCity,
-      title: 'SR Elite Towers',
-      location: 'HITEC City, Hyderabad',
-      description: 'Ultra-modern 3 & 4 BHK apartments in the IT hub. Smart home features, 24/7 security, and premium finishes across 320 units.',
-      category: 'Smart Apartments',
+      title: 'S S Avenue',
+      location: 'Madhapur, Hyderabad',
+      description: 'Residential tower in the heart of Madhapur with contemporary design and excellent connectivity.',
+      category: 'Residential Tower',
       status: 'Ongoing',
-      area: '1750-2800 sq.ft',
+      type: 'ongoing',
     },
+  ]
+
+  const completedProjects = [
     {
       icon: FaKey,
-      title: 'SR Vijayawada Heights',
-      location: 'Benz Circle, Vijayawada',
-      description: 'Affordable 2 & 3 BHK flats with excellent connectivity. 150 units with modern amenities and vastu-compliant design.',
-      category: 'Affordable Housing',
-      status: 'Ready to Move',
-      area: '1100-1500 sq.ft',
+      title: 'S S Heights',
+      location: 'Sai Nagar, Madhapur, Hyderabad',
+      description: 'Successfully completed residential project delivering quality homes with modern amenities.',
+      category: 'Residential',
+      status: 'Completed',
+      type: 'completed',
+    },
+    {
+      icon: FaBuilding,
+      title: 'S S Residency',
+      location: 'Sai Nagar, Madhapur, Hyderabad',
+      description: 'Premium residential complex completed with excellence, providing comfortable living spaces.',
+      category: 'Residential',
+      status: 'Completed',
+      type: 'completed',
+    },
+    {
+      icon: FaHome,
+      title: 'Laxmi Nilayam',
+      location: 'Kondapur, Hyderabad',
+      description: 'Quality residential project in prime Kondapur location, delivered with superior construction standards.',
+      category: 'Residential',
+      status: 'Completed',
+      type: 'completed',
     },
     {
       icon: FaMapMarkerAlt,
-      title: 'SR Paradise Homes',
-      location: 'Miyapur, Hyderabad',
-      description: 'Spacious 2, 3 & 4 BHK apartments near metro station. 200 units with clubhouse, indoor games, and rooftop garden.',
-      category: 'Metro Connectivity',
-      status: 'Booking Open',
-      area: '1300-2200 sq.ft',
+      title: 'Narayana Heights',
+      location: 'Madhapur, Hyderabad',
+      description: 'Completed residential tower offering modern living in the bustling Madhapur area.',
+      category: 'Residential',
+      status: 'Completed',
+      type: 'completed',
     },
   ]
+
+  const allProjects = [...ongoingProjects, ...completedProjects]
 
   return (
     <section id="projects" className="py-20 bg-white">
@@ -65,13 +88,22 @@ export default function Projects() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Our <span className="text-gradient">Projects</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Premium residential projects across Hyderabad, Telangana & Andhra Pradesh. Your dream home awaits.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Delivering high-quality construction projects across Hyderabad. From luxury villas to residential towers, 
+            we build sustainable and valuable spaces.
           </p>
+          <div className="flex justify-center gap-4 mb-8">
+            <span className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold">
+              {ongoingProjects.length} Ongoing Projects
+            </span>
+            <span className="inline-block bg-green-100 text-green-700 px-4 py-2 rounded-full font-semibold">
+              {completedProjects.length} Completed Projects
+            </span>
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {allProjects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -107,10 +139,7 @@ export default function Projects() {
               <p className="text-sm text-primary-600 font-semibold mb-2 flex items-center">
                 <FaMapMarkerAlt className="mr-1" /> {project.location}
               </p>
-              <p className="text-gray-600 leading-relaxed mb-3">{project.description}</p>
-              <div className="text-sm font-semibold text-gray-700 bg-gray-100 px-3 py-2 rounded-lg inline-block">
-                Area: {project.area}
-              </div>
+              <p className="text-gray-600 leading-relaxed">{project.description}</p>
             </motion.div>
           ))}
         </div>

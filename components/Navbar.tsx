@@ -44,21 +44,14 @@ export default function Navbar({ activeSection }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
-            <a href="#home" className="flex items-center space-x-3">
+            <a href="#home" className="flex items-center">
               <img 
                 src="/SRinfra/SrInfraLogo.png" 
                 alt="SR Infra Logo" 
-                className={`h-12 w-auto transition-all duration-300 ${
-                  isScrolled ? '' : 'drop-shadow-lg'
+                className={`h-14 w-auto transition-all duration-300 ${
+                  isScrolled ? '' : 'drop-shadow-2xl'
                 }`}
               />
-              <h1
-                className={`text-2xl font-bold transition-colors duration-300 ${
-                  isScrolled ? 'text-primary-600' : 'text-white'
-                }`}
-              >
-                SR INFRA
-              </h1>
             </a>
           </div>
 

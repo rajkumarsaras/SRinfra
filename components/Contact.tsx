@@ -22,19 +22,19 @@ export default function Contact() {
     {
       icon: FaPhone,
       title: 'Phone',
-      details: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
+      details: '+91 8977520516',
+      link: 'tel:+918977520516',
     },
     {
       icon: FaEnvelope,
       title: 'Email',
-      details: 'info@srinfra.com',
-      link: 'mailto:info@srinfra.com',
+      details: 'srinfra33@gmail.com',
+      link: 'mailto:srinfra33@gmail.com',
     },
     {
       icon: FaMapMarkerAlt,
       title: 'Address',
-      details: '123 Infrastructure Ave, City, State 12345',
+      details: 'Diamond Oak, Block B, Road No.2, Nallagandla, Serilingampally, Rangareddy, Telangana',
       link: '#',
     },
   ]
@@ -59,7 +59,7 @@ export default function Contact() {
             Get In <span className="text-gradient">Touch</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to start your next infrastructure project? Contact us today for a consultation.
+            Ready to build your dream home? Contact us today for consultation and site visits.
           </p>
         </motion.div>
 
@@ -73,23 +73,36 @@ export default function Contact() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
             
             <div className="space-y-6 mb-8">
-              {contactInfo.map((info, index) => (
-                <a
-                  key={index}
-                  href={info.link}
-                  className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300 group"
-                >
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center group-hover:bg-primary-600 transition-colors duration-300">
-                      <info.icon className="text-xl text-primary-600 group-hover:text-white transition-colors duration-300" />
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">{info.title}</h4>
-                    <p className="text-gray-600">{info.details}</p>
-                  </div>
-                </a>
-              ))}
+              <div className="flex items-start space-x-4">
+                <FaPhone className="text-2xl text-primary-600 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                  <p className="text-gray-600">+91 8977520516</p>
+                  <p className="text-gray-600">+91 8977020517</p>
+                  <p className="text-gray-600">+91 8977020518</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <FaEnvelope className="text-2xl text-primary-600 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                  <p className="text-gray-600">srinfra33@gmail.com</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <FaMapMarkerAlt className="text-2xl text-primary-600 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+                  <p className="text-gray-600">
+                    Diamond Oak, Block B, Road No.2,<br />
+                    Doctors Colony, Gulmohar Park,<br />
+                    Nallagandla, Serilingampally,<br />
+                    Rangareddy, Telangana
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="border-t pt-8">
@@ -155,7 +168,7 @@ export default function Contact() {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
-                  placeholder="+1 (555) 123-4567"
+                  placeholder="+91 1234567890"
                 />
               </div>
 

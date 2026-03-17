@@ -27,8 +27,8 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6">
-            Your Dream Home in
-            <span className="block text-primary-300 mt-2">Hyderabad Awaits</span>
+            Where Innovation Meets
+            <span className="block text-primary-300 mt-2">Construction</span>
           </h1>
         </motion.div>
 
@@ -38,8 +38,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xl sm:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto"
         >
-          Premium flats & apartments across Hyderabad, Telangana & Andhra Pradesh. 
-          Luxury living with world-class amenities at the best locations.
+          Building sustainable and valuable spaces that enhance communities and lives. 
+          Specializing in residential construction, villas, and premium apartments in Hyderabad.
         </motion.p>
 
         <motion.div
