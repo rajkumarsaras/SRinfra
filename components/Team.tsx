@@ -17,12 +17,6 @@ export default function Team() {
       experience: 'Above 20 Years',
       icon: FaUserTie,
     },
-    {
-      name: 'P Srinivas',
-      profession: 'Civil Engineer',
-      experience: 'Above 20 Years',
-      icon: FaUserTie,
-    },
   ]
 
   return (
@@ -46,7 +40,7 @@ export default function Team() {
 
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Managing Partners</h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {managingPartners.map((partner, index) => (
               <motion.div
                 key={index}

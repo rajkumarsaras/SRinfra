@@ -55,7 +55,6 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>+91 8977520516</li>
               <li>+91 8977020517</li>
               <li>+91 8977020518</li>
               <li>srinfra33@gmail.com</li>

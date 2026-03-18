@@ -22,8 +22,8 @@ export default function Contact() {
     {
       icon: FaPhone,
       title: 'Phone',
-      details: '+91 8977520516',
-      link: 'tel:+918977520516',
+      details: '+91 8977020517 / +91 8977020518',
+      link: 'tel:+918977020517',
     },
     {
       icon: FaEnvelope,
@@ -77,7 +77,6 @@ export default function Contact() {
                 <FaPhone className="text-2xl text-primary-600 mt-1" />
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
-                  <p className="text-gray-600">+91 8977520516</p>
                   <p className="text-gray-600">+91 8977020517</p>
                   <p className="text-gray-600">+91 8977020518</p>
                 </div>

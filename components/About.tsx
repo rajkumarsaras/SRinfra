@@ -7,7 +7,7 @@ export default function About() {
   const stats = [
     { icon: FaChartLine, value: '20+', label: 'Years Experience' },
     { icon: FaBuilding, value: '10+', label: 'Projects Completed' },
-    { icon: FaUsers, value: '3', label: 'Managing Partners' },
+    { icon: FaUsers, value: '2', label: 'Managing Partners' },
     { icon: FaAward, value: '100%', label: 'Client Satisfaction' },
   ]
 
