@@ -1,138 +1,158 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaBuilding, FaHome, FaCity, FaKey, FaMapMarkerAlt } from 'react-icons/fa'
+import { HiOutlineMapPin, HiOutlineWrenchScrewdriver, HiOutlineCheckBadge } from 'react-icons/hi2'
+import { ScrollBuilding } from './BuildingParallax'
 
 export default function Projects() {
+  const basePath = process.env.NODE_ENV === 'production' ? '/SRinfra' : ''
+
   const ongoingProjects = [
     {
-      icon: FaBuilding,
       title: 'Aparna Amber Villas',
       location: 'Gopanpalli, Hyderabad',
       description: 'Prestigious villas gated community project offering luxury living with modern amenities and sustainable design.',
       category: 'Luxury Villas',
-      status: 'Ongoing',
-      type: 'ongoing',
+      image: `${basePath}/Projects/APARNA AMBER BUNGALOWSImage1.png`,
     },
     {
-      icon: FaHome,
       title: 'Blufinn Villa',
       location: 'Hyderabad',
       description: 'Premium villa project featuring world-class construction and modern architectural design with luxury amenities.',
       category: 'Premium Villas',
-      status: 'Ongoing',
-      type: 'ongoing',
+      image: `${basePath}/Projects/Bluefin1.png`,
     },
   ]
 
   const completedProjects = [
     {
-      icon: FaKey,
       title: 'S S Heights',
       location: 'Sai Nagar, Madhapur, Hyderabad',
       description: 'Successfully completed residential project delivering quality homes with modern amenities.',
-      category: 'Residential',
-      status: 'Completed',
-      type: 'completed',
+      image: `${basePath}/Projects/SSHights.png`,
     },
     {
-      icon: FaBuilding,
       title: 'S S Residency',
       location: 'Sai Nagar, Madhapur, Hyderabad',
       description: 'Premium residential complex completed with excellence, providing comfortable living spaces.',
-      category: 'Residential',
-      status: 'Completed',
-      type: 'completed',
+      image: `${basePath}/Projects/ProjectSS.png`,
     },
     {
-      icon: FaHome,
       title: 'Laxmi Nilayam',
       location: 'Kondapur, Hyderabad',
       description: 'Quality residential project in prime Kondapur location, delivered with superior construction standards.',
-      category: 'Residential',
-      status: 'Completed',
-      type: 'completed',
+      image: `${basePath}/Projects/Project1.png`,
     },
     {
-      icon: FaMapMarkerAlt,
       title: 'Narayana Heights',
       location: 'Madhapur, Hyderabad',
       description: 'Completed residential tower offering modern living in the bustling Madhapur area.',
-      category: 'Residential',
-      status: 'Completed',
-      type: 'completed',
+      image: `${basePath}/Projects/SSInteror.png`,
     },
   ]
 
-  const allProjects = [...ongoingProjects, ...completedProjects]
-
   return (
-    <section id="projects" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="relative py-24 bg-white overflow-hidden">
+      <ScrollBuilding image={`${basePath}/Projects/Website/website4.png`} side="left" size="lg" />
+      <ScrollBuilding image={`${basePath}/Projects/Website/website2.png`} side="right" size="md" offset={100} />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our <span className="text-gradient">Projects</span>
+          <p className="text-primary-600 font-semibold tracking-widest uppercase text-sm mb-3">Our Portfolio</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-gray-900 mb-6">
+            Featured <span className="text-gradient">Projects</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Delivering high-quality construction projects across Hyderabad. From luxury villas to residential towers, 
-            we build sustainable and valuable spaces.
+          <p className="text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
+            Delivering high-quality construction projects across Hyderabad — from luxury villas to residential towers.
           </p>
-          <div className="flex justify-center gap-4 mb-8">
-            <span className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold">
-              {ongoingProjects.length} Ongoing Projects
-            </span>
-            <span className="inline-block bg-green-100 text-green-700 px-4 py-2 rounded-full font-semibold">
-              {completedProjects.length} Completed Projects
-            </span>
-          </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {allProjects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl premium-shadow hover:premium-glow transition-all duration-500 border border-gray-200 hover:border-primary-300 group hover:-translate-y-2"
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-6 group-hover:bg-primary-600 transition-colors duration-300">
-                <project.icon className="text-3xl text-primary-600 group-hover:text-white transition-colors duration-300" />
-              </div>
-              
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-sm font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full">
-                  {project.category}
-                </span>
-                <span
-                  className={`text-xs font-medium px-3 py-1 rounded-full ${
-                    project.status === 'Ready to Move'
-                      ? 'bg-green-100 text-green-700'
-                      : project.status === 'Ongoing' || project.status === 'Under Construction'
-                      ? 'bg-blue-100 text-blue-700'
-                      : 'bg-yellow-100 text-yellow-700'
-                  }`}
-                >
-                  {project.status}
-                </span>
-              </div>
+        <div className="mb-20">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="flex items-center gap-3 mb-8"
+          >
+            <HiOutlineWrenchScrewdriver className="text-2xl text-primary-600" />
+            <h3 className="text-2xl font-heading font-bold text-gray-900">Ongoing Projects</h3>
+            <span className="ml-2 text-xs font-bold bg-primary-50 text-primary-700 px-3 py-1 rounded-full">{ongoingProjects.length}</span>
+          </motion.div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {ongoingProjects.map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.12 }}
+                viewport={{ once: true }}
+                className="group rounded-2xl overflow-hidden premium-shadow card-hover bg-white"
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  <span className="absolute top-4 right-4 bg-primary-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg tracking-wide uppercase">
+                    Ongoing
+                  </span>
+                </div>
+                <div className="p-6">
+                  <span className="text-xs font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full">{project.category}</span>
+                  <h3 className="text-2xl font-heading font-bold text-gray-900 mt-3 mb-1">{project.title}</h3>
+                  <p className="text-sm text-gray-400 font-medium mb-3 flex items-center gap-1">
+                    <HiOutlineMapPin className="text-base" /> {project.location}
+                  </p>
+                  <p className="text-gray-500 leading-relaxed text-sm">{project.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
 
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                {project.title}
-              </h3>
-              <p className="text-sm text-primary-600 font-semibold mb-2 flex items-center">
-                <FaMapMarkerAlt className="mr-1" /> {project.location}
-              </p>
-              <p className="text-gray-600 leading-relaxed">{project.description}</p>
-            </motion.div>
-          ))}
+        <div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="flex items-center gap-3 mb-8"
+          >
+            <HiOutlineCheckBadge className="text-2xl text-green-600" />
+            <h3 className="text-2xl font-heading font-bold text-gray-900">Completed Projects</h3>
+            <span className="ml-2 text-xs font-bold bg-green-50 text-green-700 px-3 py-1 rounded-full">{completedProjects.length}</span>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {completedProjects.map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                viewport={{ once: true }}
+                className="group rounded-2xl overflow-hidden premium-shadow card-hover bg-white border border-gray-100"
+              >
+                <div className="relative h-44 overflow-hidden">
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  <span className="absolute top-3 right-3 bg-green-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wide">
+                    Completed
+                  </span>
+                </div>
+                <div className="p-4">
+                  <h3 className="text-base font-heading font-bold text-gray-900 mb-1">{project.title}</h3>
+                  <p className="text-xs text-gray-400 flex items-center gap-1 mb-2">
+                    <HiOutlineMapPin className="text-xs" /> {project.location}
+                  </p>
+                  <p className="text-gray-500 text-xs leading-relaxed">{project.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

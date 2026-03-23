@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { DM_Sans, Playfair_Display } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-body' })
+const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-heading' })
 
 export const metadata: Metadata = {
-  title: 'SR Infra - Construction Company in Hyderabad | Residential Villas & Apartments',
-  description: 'SR Infra is a dynamic construction company in Hyderabad specializing in residential construction, luxury villas, and premium apartments. Established by experienced Civil Engineers with 20+ years expertise. Building sustainable and valuable spaces across Telangana & Andhra Pradesh.',
-  keywords: 'construction company Hyderabad, residential construction, luxury villas Hyderabad, apartments Hyderabad, civil engineers, sustainable construction, Madhapur projects, Kondapur apartments, Patancheru villas',
+  title: 'SR Infra - Premium Construction Company in Hyderabad | Luxury Villas & Residences',
+  description: 'SR Infra is a premier construction company in Hyderabad specializing in luxury villas, premium residences and gated communities. Established by experienced Civil Engineers with 25+ years expertise. Building sustainable and valuable spaces across Telangana & Andhra Pradesh.',
+  keywords: 'construction company Hyderabad, luxury villas Hyderabad, premium residences, gated community Hyderabad, civil engineers, sustainable construction, Gopanpalli villas, Madhapur apartments, Kondapur residences',
 }
 
 export default function RootLayout({
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>{children}</body>
+      <body className={`${dmSans.variable} ${playfair.variable} font-sans`}>{children}</body>
     </html>
   )
 }
