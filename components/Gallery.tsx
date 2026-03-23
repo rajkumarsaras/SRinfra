@@ -10,28 +10,40 @@ export default function Gallery() {
   
   const galleryImages = [
     {
+      title: 'Aparna Amber Bungalows',
+      category: 'Luxury Villas - Gopanpalli',
+      color: 'from-blue-500 to-blue-700',
+      image: `${basePath}/Projects/APARNA AMBER BUNGALOWSImage1.png`,
+    },
+    {
+      title: 'Aparna Amber Bungalows',
+      category: 'Premium Architecture',
+      color: 'from-green-500 to-green-700',
+      image: `${basePath}/Projects/APARNA AMBER BUNGALOWSImage2.png`,
+    },
+    {
+      title: 'Bluefin Villa',
+      category: 'Modern Design',
+      color: 'from-purple-500 to-purple-700',
+      image: `${basePath}/Projects/Bluefin01.png`,
+    },
+    {
+      title: 'Bluefin Villa',
+      category: 'Premium Villas',
+      color: 'from-orange-500 to-orange-700',
+      image: `${basePath}/Projects/Bluefin02.png`,
+    },
+    {
+      title: 'Bluefin Villa',
+      category: 'Luxury Living',
+      color: 'from-pink-500 to-pink-700',
+      image: `${basePath}/Projects/Bluefin03.png`,
+    },
+    {
       title: 'S S Heights',
       category: 'Completed - Madhapur',
-      color: 'from-blue-500 to-blue-700',
+      color: 'from-indigo-500 to-indigo-700',
       image: `${basePath}/Projects/SSHights.png`,
-    },
-    {
-      title: 'S S Interior',
-      category: 'Premium Interiors',
-      color: 'from-green-500 to-green-700',
-      image: `${basePath}/Projects/SSInteror.png`,
-    },
-    {
-      title: 'Project SS',
-      category: 'Residential Development',
-      color: 'from-purple-500 to-purple-700',
-      image: `${basePath}/Projects/ProjectSS.png`,
-    },
-    {
-      title: 'Ongoing Project',
-      category: 'Under Construction',
-      color: 'from-orange-500 to-orange-700',
-      image: `${basePath}/Projects/Project1.png`,
     },
   ]
 

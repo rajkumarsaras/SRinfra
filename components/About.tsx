@@ -5,7 +5,7 @@ import { FaAward, FaUsers, FaBuilding, FaChartLine } from 'react-icons/fa'
 
 export default function About() {
   const stats = [
-    { icon: FaChartLine, value: '20+', label: 'Years Experience' },
+    { icon: FaChartLine, value: '25+', label: 'Years Experience' },
     { icon: FaBuilding, value: '10+', label: 'Projects Completed' },
     { icon: FaUsers, value: '2', label: 'Managing Partners' },
     { icon: FaAward, value: '100%', label: 'Client Satisfaction' },

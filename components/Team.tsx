@@ -8,13 +8,13 @@ export default function Team() {
     {
       name: 'M Rama Krishna',
       profession: 'Civil Engineer',
-      experience: 'Above 20 Years',
+      experience: 'Above 25 Years',
       icon: FaUserTie,
     },
     {
       name: 'S S Babu',
       profession: 'Civil Engineer',
-      experience: 'Above 20 Years',
+      experience: 'Above 25 Years',
       icon: FaUserTie,
     },
   ]

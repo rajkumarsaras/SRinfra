@@ -1,9 +1,29 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { FaArrowDown } from 'react-icons/fa'
+import { useState, useEffect } from 'react'
 
 export default function Hero() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  
+  const basePath = process.env.NODE_ENV === 'production' ? '/SRinfra' : ''
+  
+  const backgroundImages = [
+    `${basePath}/Projects/APARNA AMBER BUNGALOWSImage1.png`,
+    `${basePath}/Projects/APARNA AMBER BUNGALOWSImage2.png`,
+    `${basePath}/Projects/Bluefin01.png`,
+    `${basePath}/Projects/Bluefin02.png`,
+    `${basePath}/Projects/Bluefin03.png`,
+  ]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [backgroundImages.length])
+
   const scrollToAbout = () => {
     const element = document.querySelector('#about')
     if (element) {
@@ -14,11 +34,25 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative h-screen flex items-center justify-center bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 overflow-hidden"
+      className="relative h-screen flex items-center justify-center overflow-hidden"
     >
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentImageIndex}
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.9 }}
+          transition={{ duration: 1.5 }}
+          className="absolute inset-0"
+        >
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${backgroundImages[currentImageIndex]})` }}
+          />
+        </motion.div>
+      </AnimatePresence>
       
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE0YzMuMzE0IDAgNiAyLjY4NiA2IDZzLTIuNjg2IDYtNiA2LTYtMi42ODYtNi02IDIuNjg2LTYgNi02ek0yNCAzNmMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <motion.div

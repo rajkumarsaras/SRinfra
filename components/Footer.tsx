@@ -1,6 +1,6 @@
 'use client'
 
-import { FaArrowUp } from 'react-icons/fa'
+import { FaArrowUp, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa'
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -8,6 +8,12 @@ export default function Footer() {
   }
 
   const currentYear = new Date().getFullYear()
+
+  const socialLinks = [
+    { icon: FaLinkedin, link: '#', color: 'hover:text-blue-400' },
+    { icon: FaTwitter, link: '#', color: 'hover:text-blue-300' },
+    { icon: FaFacebook, link: '#', color: 'hover:text-blue-500' },
+  ]
 
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -53,13 +59,28 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="text-lg font-semibold mb-4">Contact Information</h4>
+            <ul className="space-y-2 text-gray-400 mb-6">
               <li>+91 8977020517</li>
               <li>+91 8977020518</li>
               <li>srinfra33@gmail.com</li>
               <li className="leading-relaxed">Diamond Oak, Block B, Road No.2,<br />Doctors Colony, Gulmohar Park,<br />Nallagandla, Serilingampally,<br />Rangareddy, Telangana</li>
             </ul>
+            
+            <div className="border-t border-gray-800 pt-4">
+              <h4 className="text-lg font-semibold mb-3">Follow Us</h4>
+              <div className="flex space-x-3">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.link}
+                    className={`w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 ${social.color} transition-colors duration-300 hover:bg-gray-700`}
+                  >
+                    <social.icon className="text-xl" />
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
