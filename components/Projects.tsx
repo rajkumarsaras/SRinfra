@@ -5,22 +5,20 @@ import { HiOutlineMapPin, HiOutlineWrenchScrewdriver, HiOutlineCheckBadge } from
 import { ScrollBuilding } from './BuildingParallax'
 
 export default function Projects() {
-  const basePath = process.env.NODE_ENV === 'production' ? '/SRinfra' : ''
-
   const ongoingProjects = [
     {
       title: 'Aparna Amber Villas',
       location: 'Gopanpalli, Hyderabad',
       description: 'Prestigious villas gated community project offering luxury living with modern amenities and sustainable design.',
       category: 'Luxury Villas',
-      image: `${basePath}/Projects/APARNA AMBER BUNGALOWSImage1.png`,
+      image: '/Projects/APARNA AMBER BUNGALOWSImage1.png',
     },
     {
       title: 'Blufinn Villa',
       location: 'Hyderabad',
       description: 'Premium villa project featuring world-class construction and modern architectural design with luxury amenities.',
       category: 'Premium Villas',
-      image: `${basePath}/Projects/Bluefin1.png`,
+      image: '/Projects/Bluefin1.png',
     },
   ]
 
@@ -29,32 +27,32 @@ export default function Projects() {
       title: 'S S Heights',
       location: 'Sai Nagar, Madhapur, Hyderabad',
       description: 'Successfully completed residential project delivering quality homes with modern amenities.',
-      image: `${basePath}/Projects/SSHights.png`,
+      image: '/Projects/SSHights.png',
     },
     {
       title: 'S S Residency',
       location: 'Sai Nagar, Madhapur, Hyderabad',
       description: 'Premium residential complex completed with excellence, providing comfortable living spaces.',
-      image: `${basePath}/Projects/ProjectSS.png`,
+      image: '/Projects/ProjectSS.png',
     },
     {
       title: 'Laxmi Nilayam',
       location: 'Kondapur, Hyderabad',
       description: 'Quality residential project in prime Kondapur location, delivered with superior construction standards.',
-      image: `${basePath}/Projects/Project1.png`,
+      image: '/Projects/Project1.png',
     },
     {
       title: 'Narayana Heights',
       location: 'Madhapur, Hyderabad',
       description: 'Completed residential tower offering modern living in the bustling Madhapur area.',
-      image: `${basePath}/Projects/SSInteror.png`,
+      image: '/Projects/SSInteror.png',
     },
   ]
 
   return (
     <section id="projects" className="relative py-24 bg-white overflow-hidden">
-      <ScrollBuilding image={`${basePath}/Projects/Website/website4.png`} side="left" size="lg" />
-      <ScrollBuilding image={`${basePath}/Projects/Website/website2.png`} side="right" size="md" offset={100} />
+      <ScrollBuilding image="/Projects/Website/website4.png" side="left" size="lg" />
+      <ScrollBuilding image="/Projects/Website/website2.png" side="right" size="md" offset={100} />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

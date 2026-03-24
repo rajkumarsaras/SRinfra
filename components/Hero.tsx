@@ -13,15 +13,13 @@ export default function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '25%'])
   const contentOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0])
 
-  const basePath = process.env.NODE_ENV === 'production' ? '/SRinfra' : ''
-
   const heroImages = [
-    `${basePath}/Projects/Hero/Bluefin2.png`,
-    `${basePath}/Projects/Hero/Bluefin3.png`,
-    `${basePath}/Projects/Hero/Bluefin4.png`,
-    `${basePath}/Projects/Hero/Bluefin5.png`,
-    `${basePath}/Projects/Hero/Bluefin6.png`,
-    `${basePath}/Projects/Hero/Bluefin8.png`,
+    '/Projects/Hero/Bluefin2.png',
+    '/Projects/Hero/Bluefin3.png',
+    '/Projects/Hero/Bluefin4.png',
+    '/Projects/Hero/Bluefin5.png',
+    '/Projects/Hero/Bluefin6.png',
+    '/Projects/Hero/Bluefin8.png',
   ]
 
   const advance = useCallback(() => {

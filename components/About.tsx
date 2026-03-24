@@ -5,7 +5,6 @@ import { HiOutlineEye, HiOutlineRocketLaunch, HiOutlineTrophy, HiOutlineUserGrou
 import { ScrollBuilding } from './BuildingParallax'
 
 export default function About() {
-  const basePath = process.env.NODE_ENV === 'production' ? '/SRinfra' : ''
   const stats = [
     { icon: HiOutlineChartBar, value: '25+', label: 'Years Experience' },
     { icon: HiOutlineBuildingOffice2, value: '10+', label: 'Projects Delivered' },
@@ -38,8 +37,8 @@ export default function About() {
 
   return (
     <section id="about" className="relative py-24 bg-gray-50 overflow-hidden">
-      <ScrollBuilding image={`${basePath}/Projects/Website/website1.png`} side="right" size="lg" />
-      <ScrollBuilding image={`${basePath}/Projects/Website/website3.png`} side="left" size="md" offset={80} />
+      <ScrollBuilding image="/Projects/Website/website1.png" side="right" size="lg" />
+      <ScrollBuilding image="/Projects/Website/website3.png" side="left" size="md" offset={80} />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

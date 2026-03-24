@@ -5,7 +5,6 @@ import { HiOutlineUser, HiOutlineAcademicCap, HiOutlineBriefcase } from 'react-i
 import { ScrollBuilding } from './BuildingParallax'
 
 export default function Team() {
-  const basePath = process.env.NODE_ENV === 'production' ? '/SRinfra' : ''
   const managingPartners = [
     {
       name: 'M Rama Krishna',
@@ -21,8 +20,8 @@ export default function Team() {
 
   return (
     <section id="team" className="relative py-24 bg-gray-50 overflow-hidden">
-      <ScrollBuilding image={`${basePath}/Projects/Website/website1.png`} side="right" size="lg" offset={-20} />
-      <ScrollBuilding image={`${basePath}/Projects/Website/website4.png`} side="left" size="md" offset={40} />
+      <ScrollBuilding image="/Projects/Website/website1.png" side="right" size="lg" offset={-20} />
+      <ScrollBuilding image="/Projects/Website/website4.png" side="left" size="md" offset={40} />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

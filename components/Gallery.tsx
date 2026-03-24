@@ -81,16 +81,14 @@ function ProjectSlider({ project, onOpenLightbox }: { project: { title: string; 
 export default function Gallery() {
   const [lightbox, setLightbox] = useState<{ images: string[]; index: number; title: string } | null>(null)
 
-  const basePath = process.env.NODE_ENV === 'production' ? '/SRinfra' : ''
-
   const projects = [
     {
       title: 'Aparna Amber Villas',
       category: 'Luxury Villas',
       status: 'Ongoing',
       images: [
-        `${basePath}/Projects/APARNA AMBER BUNGALOWSImage1.png`,
-        `${basePath}/Projects/APARNA AMBER BUNGALOWSImage2.png`,
+        '/Projects/APARNA AMBER BUNGALOWSImage1.png',
+        '/Projects/APARNA AMBER BUNGALOWSImage2.png',
       ],
     },
     {
@@ -98,13 +96,13 @@ export default function Gallery() {
       category: 'Premium Villas',
       status: 'Ongoing',
       images: [
-        `${basePath}/Projects/Bluefin1.png`,
-        `${basePath}/Projects/Bluefin2.png`,
-        `${basePath}/Projects/Bluefin3.png`,
-        `${basePath}/Projects/Bluefin4.png`,
-        `${basePath}/Projects/Bluefin5.png`,
-        `${basePath}/Projects/Bluefin6.png`,
-        `${basePath}/Projects/Bluefin8.png`,
+        '/Projects/Bluefin1.png',
+        '/Projects/Bluefin2.png',
+        '/Projects/Bluefin3.png',
+        '/Projects/Bluefin4.png',
+        '/Projects/Bluefin5.png',
+        '/Projects/Bluefin6.png',
+        '/Projects/Bluefin8.png',
       ],
     },
     {
@@ -112,10 +110,10 @@ export default function Gallery() {
       category: 'Residential',
       status: 'Completed',
       images: [
-        `${basePath}/Projects/SSHights.png`,
-        `${basePath}/Projects/SSInteror.png`,
-        `${basePath}/Projects/ProjectSS.png`,
-        `${basePath}/Projects/Project1.png`,
+        '/Projects/SSHights.png',
+        '/Projects/SSInteror.png',
+        '/Projects/ProjectSS.png',
+        '/Projects/Project1.png',
       ],
     },
   ]
@@ -136,8 +134,8 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="relative py-24 bg-gray-50 overflow-hidden">
-      <ScrollBuilding image={`${basePath}/Projects/Website/website3.png`} side="right" size="lg" offset={-30} />
-      <ScrollBuilding image={`${basePath}/Projects/Website/website2.png`} side="left" size="sm" offset={60} />
+      <ScrollBuilding image="/Projects/Website/website3.png" side="right" size="lg" offset={-30} />
+      <ScrollBuilding image="/Projects/Website/website2.png" side="left" size="sm" offset={60} />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

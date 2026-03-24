@@ -4,13 +4,11 @@ import { motion } from 'framer-motion'
 import { HiOutlinePhone, HiOutlineEnvelope, HiOutlineMapPin } from 'react-icons/hi2'
 
 export default function Contact() {
-  const basePath = process.env.NODE_ENV === 'production' ? '/SRinfra' : ''
-
   return (
     <section id="contact" className="relative py-24 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${basePath}/Projects/Website/website2.png)` }}
+        style={{ backgroundImage: 'url(/Projects/Website/website2.png)' }}
       />
       <div className="absolute inset-0 bg-gray-900/90" />
 

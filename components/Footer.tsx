@@ -9,7 +9,6 @@ export default function Footer() {
   }
 
   const currentYear = new Date().getFullYear()
-  const basePath = process.env.NODE_ENV === 'production' ? '/SRinfra' : ''
 
   const links = [
     { name: 'Home', href: '#home' },
@@ -31,7 +30,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
             <img 
-              src={`${basePath}/SrInfraLogo.png`}
+              src="/SrInfraLogo.png"
               alt="SR Infra Logo" 
               className="h-14 w-auto mb-5"
             />
