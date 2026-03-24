@@ -45,7 +45,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
         <div className="flex justify-between items-center">
           <a href="#home" className="flex-shrink-0">
             <img 
-              src={`${process.env.NODE_ENV === 'production' ? '/SRinfra' : ''}/SrInfraLogo.png`}
+              src="/SrInfraLogo.png"
               alt="SR Infra Logo" 
               className={`h-12 w-auto transition-all duration-300 ${
                 isScrolled ? '' : 'brightness-0 invert drop-shadow-lg'
