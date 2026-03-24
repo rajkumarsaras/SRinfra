@@ -13,7 +13,7 @@ export default function StructuredData() {
           "width": 500,
           "height": 200
         },
-        "description": "Premier construction company in Hyderabad with 25+ years experience specializing in luxury villas, premium apartments, and residential projects.",
+        "description": "Leading engineering contractors in Hyderabad with 25+ years expertise. Specialized civil engineering contractors for construction projects including luxury villas, premium apartments, and residential developments. Committed to safety and architectural excellence.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Diamond Oak, Block B, Road No.2, Doctors Colony, Gulmohar Park",
@@ -74,38 +74,38 @@ export default function StructuredData() {
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Construction Services",
+          "name": "Engineering Contractor Services",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Luxury Villa Construction",
-                "description": "Premium luxury villa construction services in Hyderabad"
+                "name": "Civil Engineering Contracting for Luxury Villas",
+                "description": "Expert engineering contractor services for premium luxury villa projects in Hyderabad"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Apartment Construction",
-                "description": "High-quality apartment and residential building construction"
+                "name": "Engineering Contracting for Apartments",
+                "description": "Specialized civil engineering contractor services for apartment and residential building projects"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Gated Community Development",
-                "description": "Complete gated community development and construction"
+                "name": "Engineering Services for Gated Communities",
+                "description": "Complete engineering contractor services for gated community development projects"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Civil Engineering Services",
-                "description": "Expert civil engineering and construction management"
+                "name": "Structural & Architectural Engineering",
+                "description": "Expert structural and architectural engineering contractor services with focus on safety and excellence"
               }
             }
           ]
@@ -115,8 +115,8 @@ export default function StructuredData() {
         "@type": "WebSite",
         "@id": "https://srinfraco.com/#website",
         "url": "https://srinfraco.com",
-        "name": "SR Infra - Construction Company Hyderabad",
-        "description": "Leading construction company in Hyderabad specializing in luxury villas, apartments, and civil engineering services",
+        "name": "SR Infra - Engineering Contractors Hyderabad",
+        "description": "Leading engineering contractors in Hyderabad specializing in civil engineering services for luxury villas, apartments, and residential projects",
         "publisher": {
           "@id": "https://srinfraco.com/#organization"
         },

@@ -7,31 +7,31 @@ import { ScrollBuilding } from './BuildingParallax'
 export default function About() {
   const stats = [
     { icon: HiOutlineChartBar, value: '25+', label: 'Years Experience' },
+    { icon: HiOutlineTrophy, value: '2+', label: 'Years of Success' },
     { icon: HiOutlineBuildingOffice2, value: '10+', label: 'Projects Delivered' },
     { icon: HiOutlineUserGroup, value: '2', label: 'Managing Partners' },
-    { icon: HiOutlineTrophy, value: '100%', label: 'Client Satisfaction' },
   ]
 
   const features = [
     {
-      icon: HiOutlineSparkles,
-      title: 'Sustainable Construction',
-      description: 'Eco-friendly designs, materials and construction methods ensuring sustainability and environmental stewardship.',
+      icon: HiOutlineShieldCheck,
+      title: 'Safety Excellence',
+      description: 'Unwavering commitment to safety standards and protocols, ensuring secure work environments and risk-free project execution.',
     },
     {
-      icon: HiOutlineShieldCheck,
-      title: 'Expert Team',
-      description: 'Certified architects, skilled engineers with 25+ years experience, and dedicated construction professionals.',
+      icon: HiOutlineSparkles,
+      title: 'Architectural Excellence',
+      description: 'Superior architectural engineering with innovative designs, precision planning, and aesthetic brilliance in every project.',
     },
     {
       icon: HiOutlineCog8Tooth,
-      title: 'Quality Excellence',
-      description: 'High-quality construction projects embodying durability, modernity, and meeting evolving client needs.',
+      title: 'Engineering Expertise',
+      description: 'Expert civil engineering contractors with 25+ years experience delivering structural integrity and technical excellence.',
     },
     {
       icon: HiOutlineClipboardDocumentList,
-      title: 'Project Management',
-      description: 'Comprehensive oversight from conception through completion ensuring timely delivery and success.',
+      title: 'Project Engineering',
+      description: 'Comprehensive engineering contractor services from design through execution ensuring quality and timely delivery.',
     },
   ]
 
@@ -52,8 +52,8 @@ export default function About() {
             About <span className="text-gradient">SR Infra</span>
           </h2>
           <p className="text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
-            A dynamic and innovative construction company established by experienced Civil Engineers, 
-            redefining the landscape of the construction industry.
+            Leading engineering contractors established by experienced Civil Engineers with 25+ years expertise, 
+            providing specialized engineering services for construction projects across Hyderabad and Telangana.
           </p>
         </motion.div>
 
@@ -70,8 +70,8 @@ export default function About() {
             </div>
             <h3 className="text-xl font-heading font-bold text-gray-900 mb-3">Our Vision</h3>
             <p className="text-gray-500 leading-relaxed">
-              To be successful in the construction industry, known for our forward-thinking approach 
-              and dedication to creating sustainable and valuable spaces that enhance communities and improve lives.
+              To be the most trusted engineering contractors in the construction industry, recognized for our commitment to safety, 
+              architectural excellence, and innovative engineering solutions that create sustainable and valuable spaces.
             </p>
           </motion.div>
           <motion.div
@@ -86,8 +86,8 @@ export default function About() {
             </div>
             <h3 className="text-xl font-heading font-bold text-gray-900 mb-3">Our Mission</h3>
             <p className="text-gray-500 leading-relaxed">
-              To innovate and excel in construction by delivering projects that embody sustainability, 
-              durability and modernity, ensuring client satisfaction and environmental stewardship are at the forefront.
+              To deliver exceptional engineering contractor services with unwavering focus on safety, architectural excellence, 
+              and structural integrity, ensuring every project meets the highest standards of quality and client satisfaction.
             </p>
           </motion.div>
         </div>
