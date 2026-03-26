@@ -75,11 +75,11 @@ export default function Hero() {
       <motion.div style={{ opacity: contentOpacity }} className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-primary-300 font-medium tracking-[0.25em] uppercase text-sm mb-6"
         >
-          Est. 1999 &mdash; Hyderabad, India
+          Hyderabad, India
         </motion.p>
 
         <motion.h1

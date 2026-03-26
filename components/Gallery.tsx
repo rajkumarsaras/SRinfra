@@ -116,6 +116,15 @@ export default function Gallery() {
         '/Projects/Project1.png',
       ],
     },
+    {
+      title: 'S Square Infra',
+      category: 'Luxury Villas',
+      status: 'Completed',
+      images: [
+        '/Projects/SSquareInfra_1.png',
+        '/Projects/SSquareInfra_2.png',
+      ],
+    },
   ]
 
   const openLightbox = (images: string[], index: number, title: string) => {

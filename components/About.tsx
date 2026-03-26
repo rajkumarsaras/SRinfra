@@ -8,7 +8,7 @@ export default function About() {
   const stats = [
     { icon: HiOutlineChartBar, value: '25+', label: 'Years Experience' },
     { icon: HiOutlineTrophy, value: '2+', label: 'Years of Success' },
-    { icon: HiOutlineBuildingOffice2, value: '10+', label: 'Projects Delivered' },
+    { icon: HiOutlineBuildingOffice2, value: '5+', label: 'Projects Delivered' },
     { icon: HiOutlineUserGroup, value: '2', label: 'Managing Partners' },
   ]
 
