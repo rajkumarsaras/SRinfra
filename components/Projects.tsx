@@ -51,7 +51,7 @@ export default function Projects() {
       title: 'S Square Infra',
       location: 'Patighanpur, Patancheru',
       description: 'Prestigious villas gated community project delivering luxury living spaces with modern amenities and sustainable design.',
-      image: '/Projects/SSquareInfra_1.png',
+      image: '/Projects/SSquareInfra_1.jpg',
     },
   ]
 

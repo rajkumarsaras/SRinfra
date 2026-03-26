@@ -121,8 +121,8 @@ export default function Gallery() {
       category: 'Luxury Villas',
       status: 'Completed',
       images: [
-        '/Projects/SSquareInfra_1.png',
-        '/Projects/SSquareInfra_2.png',
+        '/Projects/SSquareInfra_1.jpg',
+        '/Projects/SSquareInfra_2.jpg',
       ],
     },
   ]
